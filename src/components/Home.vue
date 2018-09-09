@@ -5,3 +5,11 @@
         <p>Some welcoming text</p>
     </div>
 </template>
+
+<script>
+export default {
+    created() {
+        console.log(this.$route.path);
+    }
+}
+</script>
