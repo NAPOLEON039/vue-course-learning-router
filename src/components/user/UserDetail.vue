@@ -7,7 +7,28 @@
         <router-link 
             class="btn btn-primary" 
             tag="button" 
-            :to="{name: 'userEdit', params: {id: $route.params.id}, query: {locale: 'en'}}"> Edit User
+            :to="link"> Edit User
         </router-link>
     </div>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            link: {
+                name: 'userEdit', 
+                params: {
+                    id: this.$route.params.id
+                }, 
+                query: {
+                    locale: 'en'
+                },
+                hash: '#extra'
+            }
+        }
+    }
+}
+</script>
+
+
